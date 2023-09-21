@@ -10,7 +10,7 @@ function List(props){
     return (
         <ul>
             {props.facts.map((fact) =>{
-                return fact.fact.startsWith("H") && <li key={fact.id}> {fact.fact}</li>;
+                return (fact.fact.startsWith("H")||fact.fact.startsWith("B")) && <li key={fact.id}> {fact.fact}</li>;
             })}
         </ul>
     )
@@ -23,8 +23,6 @@ function ShowList(){
     return (<>
     <h1>Fun facts </h1>
     <List facts = {facts}/>
-    {/* <Circle /> */}
-    <form><input type="text"/></form>
     </>)
 }
 
